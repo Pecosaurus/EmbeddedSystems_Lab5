@@ -84,6 +84,10 @@ volatile float temp;
 volatile float IntDegF;
 volatile float IntDegC;
 
+volatile float temp2;
+volatile float IntDegF2;
+volatile float IntDegC2;
+
 int main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;// Stop WDT
