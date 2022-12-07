@@ -102,7 +102,7 @@ int main(void)
 
     // Configure ADC - Pulse sample mode; ADCSC trigger
     ADCCTL0 |= ADCSHT_8 | ADCON;                                  // ADC ON,temperature sample period>30us
-    ADCCTL1 |= ADCSHP;                                            // s/w trig, single ch/conv, MODOSC
+    ADCCTL1 |= ADCSHP | ADCCONSEQ_1;                             // s/w trig, multiple ch/conv, MODOSC
     ADCCTL2 &= ~ADCRES;                                         // clear ADCRES in ADCCTL
     ADCCTL2 |= ADCRES_2;                                          // 12-bit conversion results
     ADCMCTL0 |= ADCSREF_1 | ADCINCH_1;                           // ADC input ch A1 => temp sense
